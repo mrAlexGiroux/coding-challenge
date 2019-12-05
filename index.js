@@ -1,9 +1,9 @@
 const express = require('express')
-const { Pool } = require('mysql');
 const path = require('path')
-const PORT = process.env.PORT || 5000
+const { Pool } = require('pg');
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: true
