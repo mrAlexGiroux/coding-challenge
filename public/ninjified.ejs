@@ -16,30 +16,27 @@
 
   <body>
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
-          <h1 class="ninja-style">Congratulations!</h1>
-          <h2>You ninja name is :</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
+          <div class="jumbotron jumbotron-fluid bg-transparent">
+              <h1 class="display-4 ninja-style">Congratulations!</h1>
+              <p class="lead text-center">You ninja name is :</p>
+          </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h1><%- ninjaName %></h1>
+          </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <img
             src="assets/img/illustration-ninja-hiya.png"
-            class="img-fluid"
           />
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
-            <h1>Crimson Drop Shadow</h1>
-          </div>
       </div>
     </div>
 
     <footer>
         <div class="container">
           <div class="row justify-content-end">
-            <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
-              <p class="footer-contents">
+            <div class="col">
+              <p>
                 Designed and developed with ♥ in Québec city.
               </p>
             </div>

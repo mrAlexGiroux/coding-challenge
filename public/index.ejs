@@ -14,26 +14,23 @@
     />
   </head>
   <body>
+
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
-          <h1 class="ninja-style">Ninja name Generator 3.0!</h1>
-          <h2>You can create your ninja name by using buzzword!</h2>
+        <div class="jumbotron jumbotron-fluid bg-transparent">
+            <h1 class="display-4 ninja-style">Ninja name Generator 3.0!</h1>
+            <p class="lead text-center">You can create your ninja name by using buzzword!</p>
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <img
             src="assets/img/illustration-ninja-fille-et-gars-mini.png"
-            class="img-fluid"
           />
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-6 col-xl-6">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <form action="/ninjify" method="post">
             <div class="form-group">
-              <label for="">Buzzwords</label>
+                <label for="buzzword">Buzzwords</label>
+                <a href="https://github.com/sindresorhus/awesome">Need help with buzzwords? Click here</a>
               <input
                 type="text"
                 class="form-control"
@@ -42,7 +39,7 @@
                 aria-describedby="buzzword"
                 placeholder="Enter Buzzword here. Seperate them with a comma"
               />
-              <button type="submit" class="btn btn-success btn-bl btn-block">
+              <button type="submit" class="btn btn-success btn-block p10">
                 Submit
               </button>
             </div>
@@ -54,8 +51,8 @@
     <footer>
       <div class="container">
         <div class="row justify-content-end">
-          <div class="col-md-auto">
-            <p class="footer-contents">
+          <div class="col">
+            <p>
               Designed and developed with ♥ in Québec city.
             </p>
           </div>

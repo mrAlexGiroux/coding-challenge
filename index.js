@@ -6,26 +6,38 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, '/public')));
-app
-  .set('views',path.join(__dirname,'public'))
-  .set('view engine', 'ejs');
+app.use(express.json());
+app.use(express.urlencoded());
+app.set('views',path.join(__dirname,'public'));
+app.set('view engine', 'ejs');
 
 app
-  .get('/', (req, res) => res.render('index'))
+  .get('/', (req, res) => res.redirect('/ninjify'))
 
-  .get('/ninjify', (req,res) =>{
+  .get('/ninjify', (req,res) => {
     
     if (req.param('x') != null) {
-      let queryBuzzword = querystring.stringify(req.query);
-      let parseBuzzword = querystring.parse(queryBuzzword, ',');
-      let buzzwords = Array.from(parseBuzzword);
+      let queryBuzzword = req.query.x;
+      let buzzwords = queryBuzzword.split(",");
       
-      let ninjaName = ninjaNameGenerator(buzzwords);
+      let ninjaName = ninjaNameGenerator.ReturnNinjaName(buzzwords);
 
-      res.render('ninjyfy',{ninjaName: ninjaName});
+      // var stringifyiedReqQuery = qs.stringify(req.query);
+      // var parsedQuery = qs.parse(stringifyiedReqQuery, { comma: true });
+
+      //const ninjaName = parsedQuery.x;
+
+      res.render('ninjified',{ninjaName: ninjaName});
+    }
+    else {
+      res.render('index');
     }
   })
   .post('/ninjify', (req, res) =>{
-    res.render('ninjify');
+    console.log(req.body);
+    let buzzwords = req.body.buzzword;
+    let ninjaName = ninjaNameGenerator.ReturnNinjaName(buzzwords);
+
+    res.render('ninjified',{'ninjaName': ninjaName});
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
