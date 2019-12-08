@@ -7,11 +7,6 @@ Go
 Scala
 Ruby
 Clojure
-ClojureScript
-Elixir
-Elm
-Erlang
-Julia
 Lua
 C
 C++
@@ -23,11 +18,7 @@ Groovy
 Dart
 Java
 Kotlin
-OCaml
-ColdFusion
-Fortran
 PHP
-Pascal
 Assembler
 AutoHotkey
 AutoIt
