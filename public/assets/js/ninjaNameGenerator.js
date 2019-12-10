@@ -7,7 +7,7 @@ const pool = new Pool({
 
 module.exports =  {
 
-    ReturnNinjaName : async (buzzwords) =>{
+    GenerateNinjaName : async (buzzwords, res) => {
 
         try {
             const client = await pool.connect()
@@ -31,7 +31,7 @@ module.exports =  {
                 ninjaName.concat(element + " ");
             });
 
-            return ninjaName;
+            res.render('ninjified',{'ninjaName': ninjaName});
         } catch (error) {
             console.log(error);
         }
