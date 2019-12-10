@@ -5,7 +5,9 @@ const pool = new Pool({
   });
 
 module.exports =  {
-
+    /**
+     * 
+     */
     GenerateNinjaName : async (buzzwords, res) => {
 
         try {
@@ -34,7 +36,7 @@ module.exports =  {
             });
             console.log("Ninjaname: " + ninjaName);
             console.log("Typeof: " + {'ninjaName': ninjaName});
-            res.render('ninjified',ninjaName);
+            res.render('ninjified',{'ninjaName': ninjaName});
         } catch (error) {
             console.log(error);
         }

@@ -1,1 +1,14 @@
-INSERT INTO buzzword (buzzword, ninjaname) VALUES ('Swift','Swift'),('Python','Splippery'),('Rust','Reliable'),('Haskell','Nunchaku'),('PureScript','Pure'),('Go','Go'),('Scala','Scalaire'),('Ruby','Shiny'),('Lua','Aul'),('C','Old'),('Cobol','Kobold'),('C++','Efficient'),('Common Lisp','Psil'),('Kotlin','Mobile'),('PHP','French'),('Assembler','Ancient'),('CSS','Beautiful'),('Angular','Angle'),('HTML','Basic'),('Vue.js','Seeing'),('React','Social');
+INSERT INTO buzzword (buzzword, ninjaname) VALUES 
+('jQuery','Legacy'),
+('Redux','Store'),
+('Agile','Agile'),
+('Cloud','Vapor'),
+('Big Data','Huge'),
+('SaaS','Sassy'),
+('LESS','Fewer'),
+('Flask','Djangno'),
+('MySQL','Mysequel'),
+('PostgreSQL','Heroku'),
+('SQL','Sequel'),
+('GitHub','LifeSaver'),
+('API','Rest');

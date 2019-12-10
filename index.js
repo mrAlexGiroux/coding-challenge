@@ -27,7 +27,7 @@ app.get('/ninjify', (req,res) => {
       buzzwords = queryBuzzword.split(",");
       
       console.log("Get Ninjify: " + buzzwords);
-      // Tell don't ask
+
       ninjaNameGenerator.GenerateNinjaName(buzzwords, res);
 
     }
@@ -44,7 +44,7 @@ app.post('/ninjify', (req, res) =>{
     let buzzwords = [""];
     buzzwords = postBuzzwords.split(",")
     console.log("Post ninjify: " + buzzwords);
-    // Tell don't ask
+
     ninjaNameGenerator.GenerateNinjaName(buzzwords, res);
 
   });
