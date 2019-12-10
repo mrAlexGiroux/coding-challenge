@@ -14,18 +14,19 @@ app.set('view engine', 'ejs');
 /**
  * 
  */
-app
-  .get('/', (req, res) => res.redirect('/ninjify'))
+app.get('/', (req, res) => res.redirect('/ninjify'));
 
    /**
     * 
     */
-  .get('/ninjify', (req,res) => {
+app.get('/ninjify', (req,res) => {
     
     if (req.param('x') != null) {
       let queryBuzzword = req.query.x;
-      let buzzwords = queryBuzzword.split(",");
+      let buzzwords = [""];
+      buzzwords = queryBuzzword.split(",");
       
+      console.log("Get Ninjify: " + buzzwords);
       // Tell don't ask
       ninjaNameGenerator.GenerateNinjaName(buzzwords, res);
 
@@ -33,16 +34,18 @@ app
     else {
       res.render('index');
     }
-  })
+  });
   /**
    * 
    */
-  .post('/ninjify', (req, res) =>{
-    console.log(req.body);
-    let buzzwords = req.body.buzzword;
+app.post('/ninjify', (req, res) =>{
+    let postBuzzwords = req.body.buzzword;
 
+    let buzzwords = [""];
+    buzzwords = postBuzzwords.split(",")
+    console.log("Post ninjify: " + buzzwords);
     // Tell don't ask
     ninjaNameGenerator.GenerateNinjaName(buzzwords, res);
 
-  })
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  });
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));

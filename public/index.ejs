@@ -27,7 +27,7 @@
           />
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <form action="/ninjify" method="post">
+          <form action="/ninjify" method="post" id="buzzwordForm">
             <div class="form-group">
                 <label for="buzzword">Buzzwords</label>
                 <a href="https://github.com/sindresorhus/awesome">Need help with buzzwords? Click here</a>
@@ -38,6 +38,7 @@
                 id="buzzword"
                 aria-describedby="buzzword"
                 placeholder="Enter Buzzword here. Seperate them with a comma"
+                required
               />
               <button type="submit" class="btn btn-success btn-block p10">
                 Submit
