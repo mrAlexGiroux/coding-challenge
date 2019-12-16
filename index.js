@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, '/public')));
+/** BodyParser.json() */
 app.use(express.json());
 app.use(express.urlencoded());
 app.set('views',path.join(__dirname,'public'));
